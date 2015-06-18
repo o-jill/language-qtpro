@@ -5,7 +5,7 @@
 'name' : 'Qt Project'
 'patterns' : [
     {
-    'match' : '^[ \\t]*#.*$'
+        'match' : '^[ \\t]*#.*$'
         'name' : 'comment.line.qtpro'
     }
     {
