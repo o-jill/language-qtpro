@@ -8,4 +8,26 @@
     'match' : '^[ \\t]*#.*$'
         'name' : 'comment.line.qtpro'
     }
+    {
+        'match' : '(CONFIG|DEFINES|FORMS|HEADERS|INCLUDEPATH|LIBS|OTHER_FILES|QT[^ \t]*|QMAKE[^ \t]*|SOURCES|TARGET|TEMPLATE|TRANSLATIONS)'
+        'captures' :
+          1: 'name' : 'keyword.control.qtpro'
+    }
+    {
+        'match' : '(\\\\)[ \t]*$'
+        'captures' :
+          1: 'name' : 'keyword.operator.qtpro'
+    }
+    {
+        'match' : '[+-=<>:]'
+        'name' : 'keyword.operator.qtpro'
+    }
+    {
+        'match' : 'QT_[A-Z_]'
+        'name' : 'constant.language.qtpro'
+    }
+    {
+        'match' : '\$\$\([A-Za-z_]+\)'
+        'name' : 'string.quoted.other.qtpro'
+    }
 ]
