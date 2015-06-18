@@ -6,15 +6,11 @@
     "atom": "*",
     "node": "*"
   },
-  "homepage": "https://github.com/o-jill/language-qtpro",
   "repository": {
     "type": "git",
     "url": "https://github.com/o-jill/language-qtpro.git"
   },
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/o-jill/language-qtpro/issues"
-  },
   "devDependencies": {
     "coffeelint": "^1.10.1"
   }

@@ -1,8 +1,11 @@
-'fileTypes':[
-    pro
+'scopeName' : 'source.pro'
+'fileTypes' : [
+    'pro'
 ]
-
-{
+'name' : 'Qt Project'
+'patterns' : [
+    {
     'match' : '^[ \\t]*#.*$'
-    'name' : 'comment'
-}
+        'name' : 'comment.line.qtpro'
+    }
+]
