@@ -1,0 +1,8 @@
+'fileTypes':[
+    pro
+]
+
+{
+    'match' : '^[ \\t]*#.*$'
+    'name' : 'comment'
+}
