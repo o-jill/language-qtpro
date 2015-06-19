@@ -1,0 +1,37 @@
+'.source.pro':
+  'DEFINES':
+    'prefix': 'DEFINES'
+    'body': 'DEFINES += ${0:_D_E_F_I_N_E_}'
+  'LIBRARY':
+    'prefix': 'LIBS'
+    'body': 'LIBS += ${0:-lmath}'
+  'CXXFLAGS':
+    'prefix': 'QMAKE_CXXFLAGS'
+    'body': 'QMAKE_CXXFLAGS += ${0:/J}'
+  'CXXFLAGS':
+    'prefix': 'CXXFLAGS'
+    'body': 'QMAKE_CXXFLAGS += ${0:/J}'
+  'QT':
+    'prefix': 'QT'
+    'body': 'QT += core gui # network opengl phonon sql svg xml webkit qt3support\ngreaterThan(QT_MAJOR_VERSION, 4): QT += widgets'
+  'TEMPLATE':
+    'prefix': 'TEMPLATE'
+    'body': 'TEMPLATE += ${0:app} # lib subdirs vcapp vclib'
+  'TRANSLATIONS':
+    'prefix': 'TRANSLATIONS'
+    'body': 'TRANSLATIONS += ${0:language.ts}'
+  'unix':
+    'prefix': 'unix'
+    'body': 'unix {\n# add your code here.\n}'
+  'macos':
+    'prefix': 'macosx'
+    'body': 'macx {\n# add your code here.\n}'
+  'windows':
+    'prefix': 'win'
+    'body': 'win32 {\n# add your code here.\n}'
+  'message':
+    'prefix': 'mess'
+    'body': 'message(${0:message})'
+  'include':
+    'prefix': 'inc'
+    'body': 'include(${0:xxx.pri})'
