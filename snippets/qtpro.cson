@@ -1,37 +1,55 @@
 '.source.pro':
   'DEFINES':
     'prefix': 'DEFINES'
-    'body': 'DEFINES += ${0:_D_E_F_I_N_E_}'
+    'body': 'DEFINES += ${1:_D_E_F_I_N_E_}'
   'LIBRARY':
     'prefix': 'LIBS'
-    'body': 'LIBS += ${0:-lmath}'
+    'body': 'LIBS += ${1:-lmath}'
   'CXXFLAGS':
     'prefix': 'QMAKE_CXXFLAGS'
-    'body': 'QMAKE_CXXFLAGS += ${0:/J}'
+    'body': 'QMAKE_CXXFLAGS += ${1:/J}'
   'CXXFLAGS':
     'prefix': 'CXXFLAGS'
-    'body': 'QMAKE_CXXFLAGS += ${0:/J}'
+    'body': 'QMAKE_CXXFLAGS += ${1:/J}'
+  'FORMS':
+    'prefix': 'FORMS'
+    'body': 'FORMS += ${1:mainwindow.ui}'
+  'HEADERS':
+    'prefix': 'HEADERS'
+    'body': 'HEADERS += ${1:mainwindow.h}'
+  'INCLUDEPATH':
+    'prefix': 'INCLUDEPATH'
+    'body': 'INCLUDEPATH += ${1:$$PWD/path/to/the/directory}'
   'QT':
     'prefix': 'QT'
-    'body': 'QT += core gui # network opengl phonon sql svg xml webkit qt3support\ngreaterThan(QT_MAJOR_VERSION, 4): QT += widgets'
+    'body': 'QT += core gui # network opengl phonon sql svg xml webkit qt3support\n\ngreaterThan(QT_MAJOR_VERSION, 4): QT += widgets'
+  'RESOURCES':
+    'prefix': 'RESOURCES'
+    'body': 'RESOURCES += ${1:resource.qrc}'
+  'SOURCES':
+    'prefix': 'SOURCES'
+    'body': 'SOURCES += ${1:main.cpp}\\\n        ${2:mainwindow.cpp}'
+  'TARGET':
+    'prefix': 'TARGET'
+    'body': 'TARGET = ${1:executable}'
   'TEMPLATE':
     'prefix': 'TEMPLATE'
-    'body': 'TEMPLATE += ${0:app} # lib subdirs vcapp vclib'
+    'body': 'TEMPLATE += ${1:app} # lib subdirs vcapp vclib'
   'TRANSLATIONS':
     'prefix': 'TRANSLATIONS'
-    'body': 'TRANSLATIONS += ${0:language.ts}'
+    'body': 'TRANSLATIONS += ${1:language.ts}'
   'unix':
     'prefix': 'unix'
-    'body': 'unix {\n# add your code here.\n}'
+    'body': 'unix {\n${1:# add your code here.}\n}'
   'macos':
     'prefix': 'macosx'
-    'body': 'macx {\n# add your code here.\n}'
+    'body': 'macx {\n${1:# add your code here.}\n}'
   'windows':
     'prefix': 'win'
-    'body': 'win32 {\n# add your code here.\n}'
+    'body': 'win32 {\n${1:# add your code here.}\n}'
   'message':
     'prefix': 'mess'
-    'body': 'message(${0:message})'
+    'body': 'message(${1:message})'
   'include':
     'prefix': 'inc'
-    'body': 'include(${0:xxx.pri})'
+    'body': 'include(${1:xxx.pri})'
