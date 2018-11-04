@@ -1,6 +1,6 @@
 'scopeName' : 'source.pro'
 'fileTypes' : [
-    'pro'
+    'pro', 'pri'
 ]
 'name' : 'Qt Project'
 'patterns' : [
