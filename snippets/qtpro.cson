@@ -5,7 +5,7 @@
   'LIBRARY':
     'prefix': 'LIBS'
     'body': 'LIBS += ${1:-lmath}'
-  'CXXFLAGS':
+  'QMAKE_CXXFLAGS':
     'prefix': 'QMAKE_CXXFLAGS'
     'body': 'QMAKE_CXXFLAGS += ${1:/J}'
   'CXXFLAGS':
